@@ -95,15 +95,22 @@ int main()
 {
 	//Just in case 
 	//WistfulPeace_7
-	ll n,temp,sum,total,ans; cin >> n;
-	sum=0;
-	total=(n*(n+1))/2;
-	for(ll i=0; i<n-1; i++)
+	string s; cin >> s;
+	int ans=1, rep=0;
+	char a='A';
+	for (char n: s)
 	{
-		cin >> temp;
-		sum+=temp;
+		if(n==a)
+		{
+			rep++;
+			ans=max(ans,rep);
+		}
+		else
+		{
+			a=n;
+			rep=1;
+		}
 	}
-	ans=total-sum;
 	cout << ans << endl;
 	return 0;
 }

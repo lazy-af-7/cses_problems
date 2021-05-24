@@ -1,0 +1,32 @@
+PROBLEM: https://cses.fi/problemset/task/1094
+
+LANG: C++17
+
+CODE:
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main()
+{
+	//Just in case 
+	//WistfulPeace_7
+	string s; cin >> s;
+	int ans=1, rep=0;
+	char a='A';
+	for (char n: s)
+	{
+		if(n==a)
+		{
+			rep++;
+			ans=max(ans,rep);
+		}
+		else
+		{
+			a=n;
+			rep=1;
+		}
+	}
+	cout << ans << endl;
+	return 0;
+}
