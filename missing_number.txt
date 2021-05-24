@@ -1,0 +1,27 @@
+PROBLEM: https://cses.fi/problemset/task/1083/
+
+INTUTION: Calculate the sum of the input and subtract it with the sum of n integers to get the missing number
+
+LANG: C++17
+
+CODE:  
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main()
+{
+	//Just in case 
+	//WistfulPeace_7
+	ll n,temp,sum,total,ans; cin >> n;
+	sum=0;
+	total=(n*(n+1))/2;
+	for(ll i=0; i<n-1; i++)
+	{
+		cin >> temp;
+		sum+=temp;
+	}
+	ans=total-sum;
+	cout << ans << endl;
+	return 0;
+}
