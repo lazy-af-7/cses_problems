@@ -1,0 +1,25 @@
+PROBLEM: https://cses.fi/problemset/task/1094
+
+INTUTION: Keep adding the difference b/w the max int and the current integer
+
+LANG: C++17
+
+CODE:
+
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main()
+{
+	//Just in case 
+	//WistfulPeace_7
+	ll n,ans=0,x,mx=0; cin >> n;
+	for(ll i=0; i<n; i++)
+	{
+		cin >> x;
+		mx=max(mx,x);
+		ans+=mx-x;
+	}
+	cout << ans << endl;
+	return 0;
+}

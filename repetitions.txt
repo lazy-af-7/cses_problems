@@ -1,5 +1,7 @@
 PROBLEM: https://cses.fi/problemset/task/1094
 
+INTUTION: Traversing the input string, we will keep a variable that will keep check for the longest repetitive char in the string.
+
 LANG: C++17
 
 CODE:

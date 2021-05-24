@@ -95,21 +95,12 @@ int main()
 {
 	//Just in case 
 	//WistfulPeace_7
-	string s; cin >> s;
-	int ans=1, rep=0;
-	char a='A';
-	for (char n: s)
+	ll n,ans=0,x,mx=0; cin >> n;
+	for(ll i=0; i<n; i++)
 	{
-		if(n==a)
-		{
-			rep++;
-			ans=max(ans,rep);
-		}
-		else
-		{
-			a=n;
-			rep=1;
-		}
+		cin >> x;
+		mx=max(mx,x);
+		ans+=mx-x;
 	}
 	cout << ans << endl;
 	return 0;
