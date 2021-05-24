@@ -91,17 +91,34 @@ defineOutFor(long long)
 #include <bits/stdc++.h>
 using namespace std;
 #define ll long long int
+#define pb push_back
 int main()
 {
 	//Just in case 
 	//WistfulPeace_7
-	ll n,ans=0,x,mx=0; cin >> n;
-	for(ll i=0; i<n; i++)
+	int n; cin >> n;
+	if (n<4 && n!=1)
+		cout << "NO SOLUTION\n";
+	else if(n==1)
+		cout << 1 << endl;
+	else
 	{
-		cin >> x;
-		mx=max(mx,x);
-		ans+=mx-x;
+		vector <int> even;
+		vector <int> odd;
+		for (int i=1; i<n+1; i++)
+		{
+			if(i%2==0)
+				even.pb(i);
+			else
+				odd.pb(i);
+		}
+		sort(even.begin(),even.end());
+		sort(odd.begin(),odd.end());
+		for (auto &it:even)
+			cout << it << " ";
+		for (auto &it:odd)
+			cout << it << " ";
+		cout << endl;
 	}
-	cout << ans << endl;
 	return 0;
 }
